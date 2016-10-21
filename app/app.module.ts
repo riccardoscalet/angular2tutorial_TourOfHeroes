@@ -9,15 +9,21 @@ import {
 } from '@angular/forms';
 
 import {
-    AppComponent
+    AppComponent,
 } from './app.component';
+import {
+    HeroDetailComponent
+} from "./hero-detail.component"
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule
     ],
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent,
+        HeroDetailComponent
+    ],
     bootstrap: [AppComponent]
 })
 

@@ -30,7 +30,8 @@ export class AppComponent implements OnInit {
     }
 
     getHeroes(): void {
-        this.heroes = this.heroService.getHeroes();
+        let promise = this.heroService.getHeroes();
+        promise.then(heroes => this.heroes = heroes);
     }
 
     selectHero(hero: Hero): void {

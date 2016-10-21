@@ -8,7 +8,7 @@ import {
 
 @Injectable()
 export class HeroService {
-    getHeroes(): Hero[] {
-        return HeroesMock;
+    getHeroes(): Promise<Hero[]> {
+        return Promise.resolve(HeroesMock);
     }
 }

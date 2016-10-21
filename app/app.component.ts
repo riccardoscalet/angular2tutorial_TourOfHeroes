@@ -11,6 +11,11 @@ import {
 export class AppComponent {
     title = "Tour of Heroes";
     heroes = Heroes;
+    selectedHero: Hero;
+
+    selectHero(hero: Hero): void {
+        this.selectedHero = hero;
+    }
 }
 
 export class Hero {

@@ -18,6 +18,9 @@ import {
     HeroesComponent,
 } from './heroes.component';
 import {
+    DashboardComponent,
+} from './dashboard.component';
+import {
     HeroDetailComponent
 } from "./hero-detail.component"
 
@@ -27,13 +30,21 @@ import {
         BrowserModule,
         FormsModule,
         RouterModule.forRoot([{
+            path: '',
+            redirectTo: '/dashboard',
+            pathMatch: 'full'
+        }, {
             path: 'heroes',
             component: HeroesComponent
-        }])
+        }, {
+            path: 'dashboard',
+            component: DashboardComponent
+        }, ]),
     ],
     declarations: [
         AppComponent,
         HeroesComponent,
+        DashboardComponent,
         HeroDetailComponent
     ],
     bootstrap: [AppComponent]

@@ -1,3 +1,7 @@
+// Starting point of the application, called directly by main.ts.
+// Bootstraps Angular2 application.  
+
+// List of imported Angular2 modules.
 import {
     NgModule
 } from '@angular/core';
@@ -11,6 +15,7 @@ import {
     RouterModule
 } from '@angular/router';
 
+// List of imported user defined components.
 import {
     AppComponent
 } from './app.component';
@@ -25,10 +30,13 @@ import {
 } from "./hero-detail.component"
 
 
+// Initializes main Angular2 module
 @NgModule({
+    // Imports all required Angular2 modules
     imports: [
         BrowserModule,
         FormsModule,
+        // Route module: specifies route paths
         RouterModule.forRoot([{
             path: '',
             redirectTo: '/dashboard',
@@ -41,12 +49,14 @@ import {
             component: DashboardComponent
         }, ]),
     ],
+    // User defined modules
     declarations: [
         AppComponent,
         HeroesComponent,
         DashboardComponent,
         HeroDetailComponent
     ],
+    // Starting module
     bootstrap: [AppComponent]
 })
 

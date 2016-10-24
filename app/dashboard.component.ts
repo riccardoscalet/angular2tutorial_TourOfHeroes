@@ -1,4 +1,4 @@
-// Dashboard page
+// Page displaying hero dashboard.
 
 import {
     Component,
@@ -24,7 +24,7 @@ export class DashboardComponent {
     heroes: Hero[] = [];
 
     // Component contructor.
-    // HeroService is automatically injected by Angular2.
+    // HeroService is automatically injected by Angular2, since it's defined as Injectable.
     constructor(private heroService: HeroService) {}
 
     // Function called when component construction has been completed.

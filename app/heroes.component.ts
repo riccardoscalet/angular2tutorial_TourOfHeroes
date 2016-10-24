@@ -1,3 +1,5 @@
+// Page containing the list of heroes.
+
 import {
     Component,
     OnInit
@@ -29,6 +31,7 @@ export class HeroesComponent implements OnInit {
     }
 
     getHeroes(): void {
+        // Usage of promises
         let promise = this.heroService.getHeroes();
         promise.then(heroes => this.heroes = heroes);
     }

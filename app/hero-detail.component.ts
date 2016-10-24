@@ -1,3 +1,5 @@
+// Page listing the details of one hero.
+
 import {
     Component,
     Input
@@ -14,7 +16,8 @@ import {
 })
 
 export class HeroDetailComponent {
-    // Input decorator allows to set this value from outside the component (in this case heroList.html)
+    // Input decorator adds the "watcher" to the valued, keeping it "synched" everywhere, including html.
+    // The value can also be set from outside the component (in this case heroList.html)
     @Input()
     hero: Hero;
 }

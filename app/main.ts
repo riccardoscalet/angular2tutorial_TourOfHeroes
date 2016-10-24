@@ -1,3 +1,5 @@
+// Entry point of the application (defined in systemjs.config.js).
+
 import {
     platformBrowserDynamic
 } from '@angular/platform-browser-dynamic';

@@ -23,7 +23,7 @@ import {
 @Component({
     moduleId: module.id,
     selector: "my-hero-detail",
-    templateUrl: "../templates/heroDetails.html",
+    templateUrl: "./hero-detail.component.html",
     // Styles applied to this component
     styleUrls: ["../styles/heroes.css"],
     providers: [HeroService]
@@ -38,7 +38,7 @@ export class HeroDetailComponent implements OnInit {
     ) {}
 
     // Input decorator adds the "watcher" to the valued, keeping it "synched" everywhere, including html.
-    // The value can also be set from outside the component (in this case heroList.html)
+    // The value can also be set from outside the component (in this case heroes.component.html)
     @Input()
     hero: Hero;
 

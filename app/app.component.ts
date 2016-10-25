@@ -7,7 +7,7 @@ import {
 // Defines html selector and corresponding html template that will replace it
 @Component({
     selector: "my-app",
-    templateUrl: "templates/app.html"
+    templateUrl: "app/app.component.html"
 })
 
 export class AppComponent {

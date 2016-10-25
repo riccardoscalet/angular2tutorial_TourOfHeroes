@@ -13,7 +13,7 @@ import {
 
 @Component({
     selector: "my-heroes",
-    templateUrl: "templates/heroList.html",
+    templateUrl: "./app/heroes.component.html",
     styleUrls: ["styles/heroes.css"],
     providers: [HeroService]
 })

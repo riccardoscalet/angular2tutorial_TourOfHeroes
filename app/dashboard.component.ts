@@ -14,7 +14,7 @@ import {
 
 @Component({
     selector: "my-dashboard",
-    templateUrl: "templates/heroDashboard.html",
+    templateUrl: "./app/dashboard.component.html",
     // Services that can be used by this component
     providers: [HeroService]
 })

@@ -25,7 +25,7 @@ import {
     selector: "my-hero-detail",
     templateUrl: "./hero-detail.component.html",
     // Styles applied to this component
-    styleUrls: ["../styles/heroes.css"],
+    styleUrls: ["../styles/hero-detail.component.css"],
     providers: [HeroService]
 })
 

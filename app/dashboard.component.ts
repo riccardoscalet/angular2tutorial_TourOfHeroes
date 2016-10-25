@@ -4,6 +4,9 @@ import {
     Component,
     OnInit
 } from '@angular/core';
+import {
+    Router
+} from '@angular/router';
 
 import {
     Hero
@@ -15,6 +18,7 @@ import {
 @Component({
     selector: "my-dashboard",
     templateUrl: "./app/dashboard.component.html",
+    styleUrls: ["../styles/dashboard.component.css"],
     // Services that can be used by this component
     providers: [HeroService]
 })
@@ -25,14 +29,17 @@ export class DashboardComponent {
 
     // Component contructor.
     // HeroService is automatically injected by Angular2, since it's defined as Injectable.
-    constructor(private heroService: HeroService) {}
+    constructor(private router: Router, private heroService: HeroService) {}
 
     // Function called when component construction has been completed.
     ngOnInit(): void {
         // Usage of promises (returned by getHeroes function)
-        this.heroService.getHeroes()        
+        this.heroService.getHeroes()
             .then(heroes => this.heroes = heroes.slice(0, 5));
     }
 
-    gotoDetail(hero: Hero): void { /* not implemented yet */ }
+    gotoDetail(hero: Hero): void {
+        let link = ['/details', hero.id];
+        this.router.navigate(link);
+    }
 }

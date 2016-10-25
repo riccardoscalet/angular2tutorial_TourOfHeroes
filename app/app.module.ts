@@ -47,7 +47,10 @@ import {
         }, {
             path: 'dashboard',
             component: DashboardComponent
-        }, ]),
+        }, {
+            path: 'details/:id',
+            component: HeroDetailComponent
+        }]),
     ],
     // User defined modules
     declarations: [

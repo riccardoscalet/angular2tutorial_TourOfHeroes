@@ -2,22 +2,56 @@
 
 import {
     Component,
-    Input
+    Input,
+    OnInit
 } from '@angular/core';
+import {
+    ActivatedRoute,
+    Params
+} from '@angular/router';
+import {
+    Location
+} from '@angular/common';
+
 import {
     Hero
 } from "./model/hero";
+import {
+    HeroService
+} from "./hero.service";
 
 @Component({
-    selector: 'my-hero-detail',
-    templateUrl: "templates/heroDetails.html",
+    moduleId: module.id,
+    selector: "my-hero-detail",
+    templateUrl: "../templates/heroDetails.html",
     // Styles applied to this component
-    styleUrls: ["styles/heroes.css"]
+    styleUrls: ["../styles/heroes.css"],
+    providers: [HeroService]
 })
 
-export class HeroDetailComponent {
+export class HeroDetailComponent implements OnInit {
+
+    constructor(
+        private heroService: HeroService,
+        private route: ActivatedRoute,
+        private location: Location
+    ) {}
+
     // Input decorator adds the "watcher" to the valued, keeping it "synched" everywhere, including html.
     // The value can also be set from outside the component (in this case heroList.html)
     @Input()
     hero: Hero;
+
+    ngOnInit(): void {
+        this.route.params.forEach((params: Params) => {
+            // Symbol "+" converts to number.
+            let id = +params['id'];
+            this.heroService.getHero(id)
+                .then(hero => this.hero = hero);
+        });
+    }
+
+    goBack(): void {
+        this.location.back();
+    }
 }

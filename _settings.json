@@ -1,0 +1,14 @@
+// Custom settings for VSCode.
+// This is just a backup file. The real one can be opened with File > Preferences > User Settings.
+
+{
+    "typescript.check.tscVersion": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "app/**/*.js": true,
+        "app/**/*.js.map": true
+    }
+}

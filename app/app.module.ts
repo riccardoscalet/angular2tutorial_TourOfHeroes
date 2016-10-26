@@ -29,6 +29,11 @@ import {
     HeroDetailComponent
 } from "./hero-detail.component"
 
+// Module where all routes are defined.
+import {
+    AppRoutingModule
+} from './app-routing.module';
+
 
 // Initializes main Angular2 module
 @NgModule({
@@ -36,23 +41,10 @@ import {
     imports: [
         BrowserModule,
         FormsModule,
-        // Route module: specifies route paths
-        RouterModule.forRoot([{
-            path: '',
-            redirectTo: '/dashboard',
-            pathMatch: 'full'
-        }, {
-            path: 'heroes',
-            component: HeroesComponent
-        }, {
-            path: 'dashboard',
-            component: DashboardComponent
-        }, {
-            path: 'details/:id',
-            component: HeroDetailComponent
-        }]),
+        // Route module: sets route paths
+        AppRoutingModule
     ],
-    // User defined modules
+    // Component modules
     declarations: [
         AppComponent,
         HeroesComponent,

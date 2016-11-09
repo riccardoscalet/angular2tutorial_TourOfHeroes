@@ -12,13 +12,13 @@ import {
 @Injectable()
 export class HeroService {
 
-    getHeroes(): Promise<Hero[]> {
+    getHeroes(): Promise < Hero[] > {
         // This method returns a promise.
         return Promise.resolve(HeroesMock);
     }
 
-    getHero(id: number): Promise<Hero> {
-        let hero: Promise<Hero> = this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
+    getHero(id: number): Promise < Hero > {
+        let hero: Promise < Hero > = this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
         return Promise.resolve(hero);
     }
 }

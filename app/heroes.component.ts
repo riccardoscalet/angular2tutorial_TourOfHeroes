@@ -1,18 +1,9 @@
 // Page containing the list of heroes.
 
-import {
-    Component,
-    OnInit
-} from '@angular/core';
-import {
-    Router
-} from '@angular/router';
-import {
-    Hero
-} from "./model/hero";
-import {
-    HeroService
-} from "./hero.service";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Hero } from "./model/hero";
+import { HeroService } from "./hero.service";
 
 @Component({
     moduleId: module.id,

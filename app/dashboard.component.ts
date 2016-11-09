@@ -1,19 +1,10 @@
 // Page displaying hero dashboard.
 
-import {
-    Component,
-    OnInit
-} from '@angular/core';
-import {
-    Router
-} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import {
-    Hero
-} from './model/hero';
-import {
-    HeroService
-} from './hero.service';
+import { Hero } from './model/hero';
+import { HeroService } from './hero.service';
 
 @Component({
     selector: "my-dashboard",

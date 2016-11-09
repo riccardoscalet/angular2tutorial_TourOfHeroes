@@ -1,12 +1,7 @@
 // Service that can be injected and used by multiple components. 
 
-import {
-    Injectable
-} from '@angular/core';
-import {
-    Hero,
-    HeroesMock
-} from "./model/hero";
+import { Injectable } from '@angular/core';
+import { Hero, HeroesMock } from "./model/hero";
 
 // Defines the service as injectable. It will be automatically injected in constructors.
 @Injectable()

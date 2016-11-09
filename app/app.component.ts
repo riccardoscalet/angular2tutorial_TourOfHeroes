@@ -1,8 +1,6 @@
 // Main application page
 
-import {
-    Component
-} from '@angular/core';
+import { Component } from '@angular/core';
 
 // Defines html selector and corresponding html template that will replace it
 @Component({

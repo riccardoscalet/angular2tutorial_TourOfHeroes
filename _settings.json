@@ -8,7 +8,8 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "app/**/*.js": true,
-        "app/**/*.js.map": true
+        "**/*.js.map": true,
+        "**/*.js": true,
+        "**/*.db": true
     }
 }

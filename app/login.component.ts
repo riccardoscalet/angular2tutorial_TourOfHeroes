@@ -15,7 +15,7 @@ import { LoginService } from "./login.service";
 export class LoginComponent implements OnInit {
     username: string;
     password: string;
-    result: string;
+    resultMessage: string;
 
     constructor(private loginService: LoginService) {}
 
@@ -24,11 +24,11 @@ export class LoginComponent implements OnInit {
 
     login(): void {
         this.loginService.login(this.username, this.password)
-            .then(res => {
-                this.result = res.json();
+            .then(response => {
+                this.resultMessage = response.json().message;
             })
             .catch(reason => {
-                console.log(reason);
+                this.resultMessage = `Error! Message: ${reason.statusText}`;
             });
     };
 

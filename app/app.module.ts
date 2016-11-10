@@ -20,50 +20,50 @@ import { LoginComponent } from "./login.component"
 import { AppRoutingModule } from './app-routing.module';
 
 
-// // Initializes main Angular2 modules for Tour of Heroes
-// @NgModule({
-//     // Imports all required Angular2 modules
-//     imports: [
-//         BrowserModule,
-//         FormsModule,
-
-//         // Route module: sets route paths
-//         AppRoutingModule
-//     ],
-
-//     // Component modules
-//     declarations: [
-//         AppComponent,
-//         HeroesComponent,
-//         DashboardComponent,
-//         HeroDetailComponent,
-//     ],
-
-//     // Starting modules
-//     bootstrap: [AppComponent]
-// })
-
-
-// Initializes main Angular2 module for Apollo Login
+// Initializes main Angular2 modules for Tour of Heroes
 @NgModule({
     // Imports all required Angular2 modules
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule
 
         // Route module: sets route paths
-
+        AppRoutingModule
     ],
 
     // Component modules
     declarations: [
-        LoginComponent
+        AppComponent,
+        HeroesComponent,
+        DashboardComponent,
+        HeroDetailComponent,
     ],
 
     // Starting modules
-    bootstrap: [LoginComponent]
+    bootstrap: [AppComponent]
 })
+
+
+// Initializes main Angular2 module for Apollo Login
+// @NgModule({
+//     // Imports all required Angular2 modules
+//     imports: [
+//         BrowserModule,
+//         FormsModule,
+//         HttpModule
+
+//         // Route module: sets route paths
+
+//     ],
+
+//     // Component modules
+//     declarations: [
+//         LoginComponent
+//     ],
+
+//     // Starting modules
+//     bootstrap: [LoginComponent]
+// })
 
 
 export class AppModule {}

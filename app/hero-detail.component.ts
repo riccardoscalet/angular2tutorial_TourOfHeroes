@@ -30,9 +30,9 @@ export class HeroDetailComponent implements OnInit {
     hero: Hero;
 
     ngOnInit(): void {
+        // Gets the value of parameter "id" and uses it to set the hero (e.g. "/detail/3")
         this.route.params.forEach((params: Params) => {
-            // Symbol "+" converts to number.
-            let id = +params['id'];
+            let id = +params['id']; // Symbol "+" converts to number.
             this.heroService.getHero(id)
                 .then(hero => this.hero = hero);
         });
